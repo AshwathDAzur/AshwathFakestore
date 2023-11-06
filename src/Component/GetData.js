@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
+import Catalog from './Catalog';
 
 export default function GetData() {
-    const [data,setdata] = useState();
+    const [data,setdata] = useState([]);
     useEffect(()=>{
         getdata();
     },[]);
@@ -16,12 +17,14 @@ export default function GetData() {
         }
     }
   return (
-    <div>
+    <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        gridGap: '20px',
+      }}>
         {
             data.map((indidata)=>(
-                <div>
-                    {indidata.title}
-                </div>
+                <Catalog data={indidata} />
             ))
         }
     </div>
