@@ -53,4 +53,4 @@ jobs:
           app-name: 'InternalWeb'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34D35CA9354F4FB59430D2CCAD7014D7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DF71054F0E1F4E0A95DE2C13E512CDAD }}
